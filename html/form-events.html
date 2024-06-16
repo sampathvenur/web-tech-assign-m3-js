@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            min-height: 100px;
+            overflow-y: auto;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Form Events Example</h1>
+        </header>
+
+        <section class="content">
+            <form id="myForm" onsubmit="handleSubmit(event)" onreset="handleReset(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+
+            <div id="output">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Form Events Example</p>
+        </footer>
+    </div>
+
+    <script src="/js/form-events.js"></script>
+</body>
+
+</html>

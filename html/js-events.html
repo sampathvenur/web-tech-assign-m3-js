@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        #example1,
+        #example2 {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #example2 {
+            background-color: #ff7043;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JavaScript Events Example</h1>
+        </header>
+
+        <section class="content">
+            <div id="example1" onclick="alert('Hello! This is an inline event handler.')">
+                Click me for an alert (Inline Event Handler)
+            </div>
+
+            <div id="example2">
+                Click me for an alert (Event Listener)
+            </div>
+
+            <div id="output">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 JavaScript Events Example</p>
+        </footer>
+    </div>
+
+    <script src="/js/js-events.js"></script>
+</body>
+
+</html>

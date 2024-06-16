@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Submit Form Example</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+            }
+
+            alert(`Form submitted!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+
+</html>

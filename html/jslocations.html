@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Embedded, and External JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/js/locations.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function embeddedFunction() {
+            alert("This is an embedded JavaScript function.");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Inline, Embedded, and External JavaScript</h1>
+        </header>
+
+        <section class="content">
+            <p>This example demonstrates the use of inline, embedded, and external JavaScript.</p>
+            <button onclick="inlineFunction()">Inline JavaScript</button>
+            <button onclick="embeddedFunction()">Embedded JavaScript</button>
+            <button onclick="externalFunction()">External JavaScript</button>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 JavaScript Examples</p>
+        </footer>
+    </div>
+
+    <script>
+        function inlineFunction() {
+            alert("This is an inline JavaScript function.");
+        }
+    </script>
+</body>
+</html>
